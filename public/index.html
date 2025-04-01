@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Fit Gym</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 1rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .hero .btn {
+            font-size: 1.2rem;
+            padding: 0.8rem 2rem;
+            margin: 0 0.5rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Featured Classes Section */
+        .featured-classes {
+            background: linear-gradient(to bottom, #f9f9f9, #fff);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .featured-classes h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .featured-classes .classes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .featured-classes .class-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-classes .class-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured-classes .class-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .featured-classes .class-item h3 {
+            color: #e8491d;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .featured-classes .class-item p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .featured-classes .btn-small {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: #e8491d;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .featured-classes .btn-small:hover {
+            background: #333;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: #333;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .testimonials .testimonials-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .testimonials .testimonial-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonials .testimonial-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonials .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials .testimonial-item h4 {
+            font-weight: bold;
+            color: #e8491d;
+        }
+
+        .testimonials .testimonial-item .stars {
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-top: 0.5rem;
+        }
+
+        .btn-secondary {
+            background: #555;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #e8491d;
+        }
+
+        #gym-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        #gym-info ul li {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        #gym-info ul li::before {
+            content: '✔';
+            color: #e8491d;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .social-icons {
+            margin: 1rem 0;
+        }
+
+        .social-icons a img {
+            width: 30px;
+            margin: 0 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.2);
+        }
+
+        .newsletter {
+            margin-top: 1rem;
+        }
+
+        .newsletter input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+
+        .newsletter button {
+            padding: 0.5rem 1rem;
+            background: #e8491d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background: #333;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            color: #e8491d;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #e8491d;
+        }
+
+        .footer-section p a {
+            color: #e8491d;
+            text-decoration: none;
+        }
+
+        .footer-section p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">G-Fit</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="membership.html" class="active">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to G-Fit Gym</h1>
+            <p>Your journey to fitness starts here. Join us today and achieve your goals!</p>
+            <a href="classes.html" class="btn">Explore Classes</a>
+            <a href="membership.html" class="btn btn-secondary">View Membership Plans</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="gym-info" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>G-Fit Gym is dedicated to helping you achieve your fitness goals. We offer state-of-the-art equipment, professional trainers, and a variety of classes to suit all fitness levels.</p>
+            <ul>
+                <li>Modern Equipment</li>
+                <li>Certified Trainers</li>
+                <li>Flexible Membership Plans</li>
+                <li>Friendly Community</li>
+            </ul>
+            <a href="about.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Featured Classes Section -->
+    <section class="featured-classes section">
+        <div class="container">
+            <h2>Our Featured Classes</h2>
+            <div class="classes-grid">
+                <div class="class-item">
+                    <img src="images/yoga.jpg" alt="Yoga Class">
+                    <h3>Yoga</h3>
+                    <p>Relax and strengthen your body with our yoga classes.</p>
+                    <a href="classes.html" class="btn btn-small">Learn More</a>
+                </div>
+                <div class="class-item">
+                    <img src="images/strength.jpg" alt="Strength Training">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and improve endurance with expert trainers.</p>
+                    <a href="classes.html" class="btn btn-small">Learn More</a>
+                </div>
+                <div class="class-item">
+                    <img src="images/cardio.jpg" alt="Cardio Workouts">
+                    <h3>Cardio Workouts</h3>
+                    <p>Boost your heart health with high-energy cardio sessions.</p>
+                    <a href="classes.html" class="btn btn-small">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <h2>What Our Members Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <p>"G-Fit Gym has completely transformed my fitness journey. The trainers are amazing!"</p>
+                    <h4>- Sarah J.</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="testimonial-item">
+                    <p>"The classes are so engaging and fun. I look forward to every session!"</p>
+                    <h4>- Mike T.</h4>
+                    <div class="stars">★★★★☆</div>
+                </div>
+                <div class="testimonial-item">
+                    <p>"The equipment is top-notch, and the environment is so motivating."</p>
+                    <h4>- Emily R.</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="classes.html">Classes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@gfitgym.com">info@gfitgym.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p>Address: 123 Fitness Street, Workout City</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 G-Fit Gym. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

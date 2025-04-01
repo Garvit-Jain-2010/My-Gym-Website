@@ -1,0 +1,32 @@
+{
+  "name": "gym-website",
+  "version": "1.0.0",
+  "description": "A responsive website for a gym, showcasing services, schedules, and membership information.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "gym",
+    "fitness",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-react": "^7.14.0",
+    "css-loader": "^5.2.4",
+    "style-loader": "^2.0.0"
+  }
+}

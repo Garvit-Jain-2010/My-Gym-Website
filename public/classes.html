@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Classes - G-Fit Gym</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Classes Section */
+        .classes {
+            background: #f9f9f9;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .classes h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .classes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .class-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .class-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .class-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .class-item h3 {
+            font-size: 1.5rem;
+            color: #e8491d;
+            margin-bottom: 0.5rem;
+        }
+
+        .class-item p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .class-item .btn {
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #e8491d;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .class-item .btn:hover {
+            background: #333;
+        }
+
+        /* Schedule Section */
+        .schedule {
+            background: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .schedule h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .schedule-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+        }
+
+        .schedule-table th {
+            background: #e8491d;
+            color: #fff;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">GFit</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="classes.html" class="active">Classes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Classes Section -->
+        <section class="classes section">
+            <div class="container">
+                <h2>Our Classes</h2>
+                <div class="classes-grid">
+                    <div class="class-item">
+                        <img src="images/yoga.jpg" alt="Yoga Class">
+                        <h3>Yoga</h3>
+                        <p>Relax and strengthen your body with our yoga classes.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="class-item">
+                        <img src="images/strength.jpg" alt="Strength Training">
+                        <h3>Strength Training</h3>
+                        <p>Build muscle and improve endurance with expert trainers.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    <div class="class-item">
+                        <img src="images/cardio.jpg" alt="Cardio Workouts">
+                        <h3>Cardio Workouts</h3>
+                        <p>Boost your heart health with high-energy cardio sessions.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section class="schedule section">
+            <div class="container">
+                <h2>Class Schedule</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>8:00 AM - 9:00 AM</td>
+                            <td>Yoga</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>6:00 PM - 7:00 PM</td>
+                            <td>Strength Training</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>7:00 AM - 8:00 AM</td>
+                            <td>Cardio Workouts</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>5:00 PM - 6:00 PM</td>
+                            <td>Yoga</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>6:00 PM - 7:00 PM</td>
+                            <td>Strength Training</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2025 G-Fit Gym. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

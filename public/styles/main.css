@@ -1,0 +1,337 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: linear-gradient(90deg, #333, #555);
+    color: #fff;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo {
+    font-size: 2.5rem; /* Increase font size for emphasis */
+    font-weight: bold;
+    color: #e8491d;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #e8491d, #ff5733); /* Add gradient effect */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the background gradient visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    letter-spacing: 2px; /* Add spacing between letters for a modern look */
+    transition: transform 0.3s ease; /* Add hover animation */
+}
+
+header .logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+header .logo a {
+    font-size: 2.5rem; /* Increase font size for emphasis */
+    font-weight: bold;
+    color: #e8491d;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #e8491d, #ff5733); /* Add gradient effect */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the background gradient visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    letter-spacing: 2px; /* Add spacing between letters for a modern look */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease; /* Add hover animation */
+}
+
+header .logo a:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #e8491d;
+}
+
+.section {
+    padding: 3rem 1rem;
+    background: #fff;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #e8491d;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ul li::before {
+    content: '✔';
+    color: #e8491d;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    background: #e8491d;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.feedback {
+    background: #f4f4f4;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.feedback h2 {
+    text-align: center;
+    color: #e8491d;
+    margin-bottom: 2rem;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e8491d;
+    outline: none;
+    box-shadow: 0 0 5px rgba(232, 73, 29, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    background: #e8491d;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background: #333; /* Fallback solid color */
+    position: relative;
+    background: url('../images/contact-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.contact-info h2 {
+    color: #fff; /* Bright white for better visibility */
+}
+
+contact-info h2,
+.contact-info .info-grid {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 250px;
+}
+
+.info-item h3 {
+    color: #e8491d; /* Highlighted color for headings */
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    color: #fff; /* Ensure text is visible */
+    font-size: 1rem;
+    margin: 0;
+}
+
+.info-item a {
+    color: #fff; /* Ensure text is visible */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: #e8491d;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
